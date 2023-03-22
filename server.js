@@ -2,6 +2,16 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const mysql = require("mysql2");
 
+const db = mysql.createConnection(
+    {
+        host:"local host",
+        user:"root",
+        password:"",
+        database: "employees"
+
+    },
+);
+
 const questions = [
 
     {
