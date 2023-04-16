@@ -2,12 +2,16 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const mysql = require("mysql2");
 
+const consoleTable = require("console.table");
+
+
+
 const db = mysql.createConnection(
     {
-        host:"local host",
+        host:"localhost",
         user:"root",
-        password:"",
-        database: "employees"
+        password:"Bootcamp2023!",
+        database: "employees_db"
 
     },
 );
@@ -31,8 +35,10 @@ const questions = [
 
 function startPrompt() {
     inquirer.prompt(questions)
-    .then()
+    .then(function(answers){
+        console.table(answers)
+    });
 
-}
+};
 
-startPrompt();
+startPrompt(db);
