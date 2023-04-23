@@ -1,8 +1,8 @@
-function viewAllEmployees(){
+function viewHandler(){
 
 
 }
 
 
 
-module.exports = viewAllEmployees;
+module.exports = viewHandler;

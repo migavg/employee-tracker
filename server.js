@@ -6,7 +6,7 @@ const consoleTable = require("console.table");
 
 
 
-const db = mysql.createConnection(
+const database = mysql.createConnection(
     {
         host:"localhost",
         user:"root",
@@ -41,4 +41,4 @@ function startPrompt() {
 
 };
 
-startPrompt(db);
+startPrompt(database);
