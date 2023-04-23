@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const mysql = require("mysql2");
-
+// const viewHandler = require("./promptHandler");
 const consoleTable = require("console.table");
 
 
@@ -33,12 +33,26 @@ const questions = [
     }
 ]
 
+
 function startPrompt() {
     inquirer.prompt(questions)
-    .then(function(answers){
-        console.table(answers)
-    });
 
+.then(function(answers){
+            console.table(answers);
+    const {commands} = answers;
+
+    if ( commands === "View All Employees") {
+       viewEmployee();
+      };
+    });
 };
 
-startPrompt(database);
+
+function viewEmployee() {
+    console.log("Here are Employees");
+};
+
+
+startPrompt();
+
+

@@ -1,8 +1,8 @@
-function viewHandler(){
 
 
-}
+// function showEmployees() {
+//     console.log("Showing Employees");
+// }
 
 
-
-module.exports = viewHandler;
+// module.exports = viewHandler;
